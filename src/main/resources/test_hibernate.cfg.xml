@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- XSD vs DTD -->
+<!-- XSD: XML Schema Definition DTD: Document Type Definition These (xsd 
+	& dtd) provide validation for whatever type of xml file you are trying to 
+	write e.g. web.xml hibernate.cfg.xml pom.xml etc Well-formed vs Valid XML 
+	well-formed: syntax is correct... Valid: is checked by an XSD or DTD file -->
+ <!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory> 
+		<!-- what properties does hibernate's sessionfactory need? JDBC Stuff: 
+			url, username, password, driver New Hibernate Stuff: the dialect -->
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">revature</property>
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://project-1.ctbiymuawd1y.us-east-2.rds.amazonaws.com:5432/
+        </property>
+		<property name="hibernate.default_schema">project1_test</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+
+		<!-- New Hibernate stuff -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.show_sql">false</property>
+        <!-- creates table from scratch -->
+		<property name="hibernate.hbm2ddl.auto">create</property> 
+		<property name="hibernate.format_sql">true</property>
+ 
+		<!-- Tell Hibernate where to look for ORMs -->
+		<mapping class="com.revature.model.ReimbursementRequest" />
+		<mapping class="com.revature.model.UserProfile" />
+		<mapping class="com.revature.model.UserPassword" />
+
+		<!-- CACHE CONFIGURATION -->
+<!-- 		<property name="net.sf.ehcache.configurationResourceName">/ehcache.xml</property>
+		<property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property>
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+		<property name="hibernate.cache.use_query_cache">true</property> -->
+	</session-factory>
+</hibernate-configuration>
+
+
+

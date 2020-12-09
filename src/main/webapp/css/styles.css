@@ -1,0 +1,34 @@
+body {
+    background-color: #85bb65;
+    font-size: 32px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 24px;
+}
+
+td, th {
+    border: 4px solid #dddddd00;
+    text-align: left;
+    padding: 12px;
+}
+
+tr:nth-child(even) {
+    background-color: #c0d6c1;
+}
+
+.button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 8px 4px;
+    cursor: pointer;
+  }

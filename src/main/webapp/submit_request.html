@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Employee Reimbursement System</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+
+<body>
+	<h1>Employee Reimbursement System</h1>
+
+	<form action="submit_request" method="post">
+		<fieldset>
+			<legend>Money Amount:</legend>
+			<input required type="text" name="moneyAmount" />
+		</fieldset>
+		<fieldset>
+			<legend>Type:</legend>
+			<input type="radio" id="lodging" name="type" value="LODGING">
+			<label for="lodging">Lodging</label>
+			<input type="radio" id="travel" name="type" value="TRAVEL">
+			<label for="travel">Travel</label>
+			<input type="radio" id="food" name="type" value="FOOD">
+			<label for="food">Food</label>
+			<input checked="true" type="radio" id="other" name="type" value="OTHER">
+			<label for="other">Other</label>
+		</fieldset>
+		<fieldset>
+			<legend>Description:</legend>
+			<input type="text" name="description" />
+		</fieldset>
+		<br />
+		<input type="submit" class="button" value="Submit" />
+	</form>
+
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>project-1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- servlets -->
+
+  <!-- index/menu -->
+  <servlet>
+    <description></description>
+    <display-name>MenuServlet</display-name>
+    <servlet-name>MenuServlet</servlet-name>
+    <servlet-class>com.revature.servlets.MenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenuServlet</servlet-name>
+    <url-pattern>/menu</url-pattern>
+  </servlet-mapping>
+
+  <!-- NoUserMenu -->
+  <servlet>
+    <description></description>
+    <display-name>NoUserMenuServlet</display-name>
+    <servlet-name>NoUserMenuServlet</servlet-name>
+    <servlet-class>com.revature.servlets.NoUserMenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NoUserMenuServlet</servlet-name>
+    <url-pattern>/no_user_menu</url-pattern>
+  </servlet-mapping>
+
+  <!-- EmployeeMenu -->
+  <servlet>
+    <description></description>
+    <display-name>EmployeeMenuServlet</display-name>
+    <servlet-name>EmployeeMenuServlet</servlet-name>
+    <servlet-class>com.revature.servlets.EmployeeMenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeMenuServlet</servlet-name>
+    <url-pattern>/employee_menu</url-pattern>
+  </servlet-mapping>
+
+  <!-- ManagerMenu -->
+  <servlet>
+    <description></description>
+    <display-name>ManagerMenuServlet</display-name>
+    <servlet-name>ManagerMenuServlet</servlet-name>
+    <servlet-class>com.revature.servlets.ManagerMenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerMenuServlet</servlet-name>
+    <url-pattern>/manager_menu</url-pattern>
+  </servlet-mapping>
+
+  <!-- ResultServlet -->
+  <servlet>
+    <description></description>
+    <display-name>ResultServlet</display-name>
+    <servlet-name>ResultServlet</servlet-name>
+    <servlet-class>com.revature.servlets.ResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResultServlet</servlet-name>
+    <url-pattern>/success</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResultServlet</servlet-name>
+    <url-pattern>/problem</url-pattern>
+  </servlet-mapping>
+
+  <!-- LogInServlet -->
+  <servlet>
+    <description></description>
+    <display-name>LogInServlet</display-name>
+    <servlet-name>LogInServlet</servlet-name>
+    <servlet-class>com.revature.servlets.LogInServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogInServlet</servlet-name>
+    <url-pattern>/log_in</url-pattern>
+  </servlet-mapping>
+
+  <!-- LogOutServlet -->
+  <servlet>
+    <description></description>
+    <display-name>LogOutServlet</display-name>
+    <servlet-name>LogOutServlet</servlet-name>
+    <servlet-class>com.revature.servlets.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogOutServlet</servlet-name>
+    <url-pattern>/log_out</url-pattern>
+  </servlet-mapping>
+
+  <!-- SubmitRequestServlet -->
+  <servlet>
+    <description></description>
+    <display-name>SubmitRequestServlet</display-name>
+    <servlet-name>SubmitRequestServlet</servlet-name>
+    <servlet-class>com.revature.servlets.employee.SubmitRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubmitRequestServlet</servlet-name>
+    <url-pattern>/submit_request</url-pattern>
+  </servlet-mapping>
+
+  <!-- EmployeeViewPendingServlet -->
+  <servlet>
+    <description></description>
+    <display-name>EmployeeViewPendingServlet</display-name>
+    <servlet-name>EmployeeViewPendingServlet</servlet-name>
+    <servlet-class>com.revature.servlets.employee.EmployeeViewPendingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeViewPendingServlet</servlet-name>
+    <url-pattern>/employee_view_pending</url-pattern>
+  </servlet-mapping>
+
+  <!-- EmployeeViewResolvedServlet -->
+  <servlet>
+    <description></description>
+    <display-name>EmployeeViewResolvedServlet</display-name>
+    <servlet-name>EmployeeViewResolvedServlet</servlet-name>
+    <servlet-class>com.revature.servlets.employee.EmployeeViewResolvedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeViewResolvedServlet</servlet-name>
+    <url-pattern>/employee_view_resolved</url-pattern>
+  </servlet-mapping>
+
+  <!-- EmployeeViewSelfServlet -->
+  <servlet>
+    <description></description>
+    <display-name>EmployeeViewSelfServlet</display-name>
+    <servlet-name>EmployeeViewSelfServlet</servlet-name>
+    <servlet-class>com.revature.servlets.employee.EmployeeViewSelfServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeViewSelfServlet</servlet-name>
+    <url-pattern>/employee_view_self</url-pattern>
+  </servlet-mapping>
+
+  <!-- EmployeeUpdateSelfServlet -->
+  <servlet>
+    <description></description>
+    <display-name>EmployeeUpdateSelfServlet</display-name>
+    <servlet-name>EmployeeUpdateSelfServlet</servlet-name>
+    <servlet-class>com.revature.servlets.employee.EmployeeUpdateSelfServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeUpdateSelfServlet</servlet-name>
+    <url-pattern>/employee_update_self</url-pattern>
+  </servlet-mapping>
+
+  <!-- ApproveRequestServlet -->
+  <servlet>
+    <description></description>
+    <display-name>ApproveRequestServlet</display-name>
+    <servlet-name>ApproveRequestServlet</servlet-name>
+    <servlet-class>com.revature.servlets.manager.ApproveRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ApproveRequestServlet</servlet-name>
+    <url-pattern>/approve_request</url-pattern>
+  </servlet-mapping>
+
+  <!-- DenyRequestServlet -->
+  <servlet>
+    <description></description>
+    <display-name>DenyRequestServlet</display-name>
+    <servlet-name>DenyRequestServlet</servlet-name>
+    <servlet-class>com.revature.servlets.manager.DenyRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DenyRequestServlet</servlet-name>
+    <url-pattern>/deny_request</url-pattern>
+  </servlet-mapping>
+
+  <!-- ViewAllPendingServlet -->
+  <servlet>
+    <description></description>
+    <display-name>ViewAllPendingServlet</display-name>
+    <servlet-name>ViewAllPendingServlet</servlet-name>
+    <servlet-class>com.revature.servlets.manager.ViewAllPendingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewAllPendingServlet</servlet-name>
+    <url-pattern>/view_all_pending</url-pattern>
+  </servlet-mapping>
+
+  <!-- ViewAllResolvedServlet -->
+  <servlet>
+    <description></description>
+    <display-name>ViewAllResolvedServlet</display-name>
+    <servlet-name>ViewAllResolvedServlet</servlet-name>
+    <servlet-class>com.revature.servlets.manager.ViewAllResolvedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewAllResolvedServlet</servlet-name>
+    <url-pattern>/view_all_resolved</url-pattern>
+  </servlet-mapping>
+
+  <!-- ViewAllEmployeesServlet -->
+  <servlet>
+    <description></description>
+    <display-name>ViewAllEmployeesServlet</display-name>
+    <servlet-name>ViewAllEmployeesServlet</servlet-name>
+    <servlet-class>com.revature.servlets.manager.ViewAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewAllEmployeesServlet</servlet-name>
+    <url-pattern>/view_all_employees</url-pattern>
+  </servlet-mapping>
+
+  <!-- ManagerViewByEmployeeServlet -->
+  <servlet>
+    <description></description>
+    <display-name>ManagerViewByEmployeeServlet</display-name>
+    <servlet-name>ManagerViewByEmployeeServlet</servlet-name>
+    <servlet-class>com.revature.servlets.manager.ManagerViewByEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagerViewByEmployeeServlet</servlet-name>
+    <url-pattern>/manager_view_by_employee</url-pattern>
+  </servlet-mapping>
+
+  <!-- Error Servlets -->
+  <error-page>
+		<error-code>404</error-code>
+		<location>/404</location>
+	</error-page>
+  <error-page>
+		<error-code>500</error-code>
+		<location>/500</location>
+	</error-page>
+
+  <servlet>
+    <description></description>
+    <display-name>NotFoundServlet</display-name>
+    <servlet-name>NotFoundServlet</servlet-name>
+    <servlet-class>com.revature.servlets.error.NotFoundServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NotFoundServlet</servlet-name>
+    <url-pattern>/404</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>InternalErrorServlet</display-name>
+    <servlet-name>InternalErrorServlet</servlet-name>
+    <servlet-class>com.revature.servlets.error.InternalErrorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InternalErrorServlet</servlet-name>
+    <url-pattern>/500</url-pattern>
+  </servlet-mapping>
+
+</web-app>
